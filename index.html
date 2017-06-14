@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/0eeb42b35b.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Courgette|Oxygen+Mono" rel="stylesheet">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <header>
+ <span id='status'>Pomodoro</span>
+</header>
+
+<section id='main-section'>
+ <section class='btns'>
+  <div>
+   <span>Session</span></br>
+   <button onclick='changeTime("-", "work")'>-</button>
+   <span class='adjust' id='work'>25</span>
+   <button onclick='changeTime("+", "work")'>+</button>
+  </div>
+ </section>
+
+ <section id='main'>
+  <button id='pause' class='main-btns' onclick='pauseBtn();'><i class="fa fa-pause" aria-hidden="true"></i></button>
+  <div id="timer"><a href="#" onclick="pomodoro();"><i class="fa fa-play" aria-hidden="true"></i></a></div>
+  <button class='main-btns' onclick='stop = true;  storedTime = work;'><i class="fa fa-stop" aria-hidden="true"></i></button>
+ </section>
+
+ <section class='btns'>
+  <div>
+   <span>Break</span><br>
+   <button onclick='changeTime("-", "rest")'>-</button>
+   <span class='adjust' id='rest'>5</span>
+   <button onclick='changeTime("+", "rest")'>+</button>
+  </div>
+ </section>
+</section>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
